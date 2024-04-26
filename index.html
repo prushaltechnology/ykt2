@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <script src=”https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js”></script>
+
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+   <!--=============== SWIPER CSS ===============-->
+   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="./css/fontawesome/css/fontawesome.min.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/header.js"></script>  
+  <script src="./js/footer.js"></script>
+  <script src="./js/carousel.js"></script>
+  <!-- <script type="module" src="main.js"></script> -->
+
+</head>
+<body>
+
+
+ <!-- Navbar Section Starts-->
+<div class="container-nav">
+  <div class="navbar">
+    <img src="images/Final2.svg" class="logo"></a>
+    <nav>
+      <ul id="menuList">
+        <li><a href="#">Home</a></li>
+        <li><a href="./pages/aboutUs/about.html">About Us</a></li>
+        <li><a href="./pages/membership/membership.html">Memberships</a></li>
+        <li><a href="./pages/instructors/instructors.html">Services</a></li>
+        <li><a href="./pages/contactUs/contactUs.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()"/>
+  </div>
+</div> 
+
+<!-- <header-component></header-component> -->
+ <!-- Navbar Section Ends-->
+
+  <!-- Carousel Section Starts-->
+  
+  <div class="slider">
+    <div class="slide" style="background-image: url('./images/slider-banner1.png');">
+      <div class="slide-content">
+        <h1>Welcome To Yoga With <br> Kavita</h1>
+        <p>Inhale <br> Exhale And <br> Relax</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('./images/slider-banner1.png');">
+      <div class="slide-content">
+        <h1>Welcome To  Corporate <br> Yoga</h1>
+        <p>Corporate Yoga Is Being Embraced By Many <br> Progressive  Business And Is A Great Benefits <br> And Is A Geat Benefit To The Workplace.</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('./images/slider-banner1.png');">
+      <div class="slide-content">
+        <h1>Discover Yourself With <br> Yoga</h1>
+        <p>Yoga Unveils Inner Strength, Promotes Self <br> -Awareness,  And Fosters Tranquility,<br>  Guiding You To  Discover Profound <br> Self-Harmony And Balance.</p>
+      </div>
+    </div>
+    <!-- Add more slides as needed -->
+  </div>
+  
+  <button class="prev" onclick="prevSlide()">&#10094;</button>
+  <button class="next" onclick="nextSlide()">&#10095;</button>
+  
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+  
+    function showSlide(index) {
+      if (index < 0) {
+        slideIndex = slides.length - 1;
+      } else if (index >= slides.length) {
+        slideIndex = 0;
+      }
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+      }
+      slides[slideIndex].classList.add('active');
+    }
+  
+    function nextSlide() {
+      slideIndex++;
+      showSlide(slideIndex);
+    }
+  
+    function prevSlide() {
+      slideIndex--;
+      showSlide(slideIndex);
+    }
+  
+    // Show the first slide initially
+    showSlide(slideIndex);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <carousel-component></carousel-component> -->
+
+
+  <div class="pro">
+    <div class="pro-container">
+
+      <div class="styles">
+        <img src="./images/Icon1.png" alt="">
+        <h4>Many Styles</h4>
+        <span>20+ Styles Of Yoga Workout <br> and Meditation that suits everyone <br><br> <a href="" class="hero-btn">Read More</a> </span>
+      </div>
+      <div class="styles">
+        <img src="./images/Icon1.png" alt="">
+        <h4>Pro Instructors</h4>
+        <span>20+ Styles Of Yoga Workout <br> and Meditation that suits everyone <br><br> <a href="" class="hero-btn">Read More</a> </span>
+      </div>
+      <div class="styles">
+        <img src="./images/Icon1.png" alt="">
+        <h4>Quality Content</h4>
+        <span>20+ Styles Of Yoga Workout <br> and Meditation that suits everyone <br><br> <a href="" class="hero-btn">Read More</a> </span>
+  
+      </div>
+
+      
+    </div>
+  
+  </div>
+
+ <!-- Carousel Section Ends-->
+
+
+
+
+<!-- Popular Classes Start-->
+
+
+<section class="container">
+  <div class="card__container swiper">
+    <div class="teacher-text">
+      <h1>Popular Classes</h1>
+       <p>A Meditative means of discovering dysfunctional perception and cognition,as well as overcoming it to release suffering, find inner peace and salvation.</p>
+
+        <div class="slide-buttons">
+ 
+          <div class="swiper-button-next">
+            <i class="ri-arrow-right-s-line"></i>
+         </div>
+         
+         <div class="swiper-button-prev">
+            <i class="ri-arrow-left-s-line"></i>
+         </div>
+
+        </div>
+       
+
+    </div>
+     <div class="card__content">
+        <div class="swiper-wrapper">
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                 <img src="./images/popular-img.jpg" alt="image" class="card__img">
+                
+              </div>
+
+              <div class="card__data">
+                <img src="./images/stars.svg" alt="">
+                 <h4 class="card_name1">With Kavita</h4>
+                 <h3 class="card__name">Kids Yoga Classes</h3>
+                  
+                 <h3>$49</h3>
+                 <button class="join-button"><span>Join Now</span></button>
+                 <!-- <a href="#" class="card__button">Join Now</a> -->
+              </div>
+           </article>
+
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img src="./images/popular-img.jpg" alt="image" class="card__img">
+                 
+              </div>
+
+              <div class="card__data">
+                <img src="./images/stars.svg" alt="">
+                <h4 class="card_name1">With Kavita</h4>
+                 <h3 class="card__name">Kids Yoga Classes</h3>
+     
+                 <h3>$49</h3>
+                 <button class="join-button"><span>Join Now</span></button>
+              </div>
+           </article>
+
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img src="./images/popular-img.jpg" alt="image" class="card__img">
+                
+              </div>
+
+              <div class="card__data">
+                <img src="./images/stars.svg" alt="">
+                 <h4 class="card_name1">With Kavita</h4>
+                 <h3 class="card__name">Kids Yoga Classes</h3>
+     
+                 <h3>$49</h3>
+                 <button class="join-button"><span>Join Now</span></button>
+              </div>
+           </article>
+
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img src="./images/popular-img.jpg" alt="image" class="card__img">
+                
+              </div>
+
+              <div class="card__data">
+                <img src="./images/stars.svg" alt="">
+                 <h4 class="card_name1">With Kavita</h4>
+                 <h3 class="card__name">Kids Yoga Classes</h3>
+
+                 <h3>$49</h3>
+                 <button class="join-button"><span>Join Now</span></button>
+              </div>
+           </article>
+
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img src="./images/popular-img.jpg" alt="image" class="card__img">
+                
+              </div>
+
+              <div class="card__data">
+                <img src="./images/stars.svg" alt="">
+                 <h4 class="card_name1">With Kavita</h4>
+                 <h3 class="card__name">Kids Yoga Classes</h3>
+
+                 <h3>$49</h3>
+                 <button class="join-button"><span>Join Now</span></button>
+              </div>
+           </article>
+        </div>
+     </div>
+     <!-- Pagination -->
+     <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+
+<!-- Popular Classes End-->
+
+
+
+<!-- Upcoming Classes Start-->
+
+
+
+<section class="container">
+  <div class="card__container swiper">
+    <div class="teacher-text">
+      <h1>Upcoming Classes</h1>
+       <p>A Meditative means of discovering dysfunctional perception and cognition,as well as overcoming it to release suffering, find inner peace and salvation.</p>
+
+        <div class="slide-buttons">
+ 
+          <div class="swiper-button-next">
+            <i class="ri-arrow-right-s-line"></i>
+         </div>
+         
+         <div class="swiper-button-prev">
+            <i class="ri-arrow-left-s-line"></i>
+         </div>
+
+        </div>
+       
+
+    </div>
+     <div class="card__content">
+        <div class="swiper-wrapper">
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                 <img src="./images/upcoming-img.jpg" alt="image" class="card__img">
+                
+              </div>
+
+              <div class="card__data">
+                <!-- <img src="./images/stars.svg" alt=""> -->
+                 <h4 class="card_name1">With Kavita</h4>
+                 <h3 class="card__name">Kids Yoga Classes</h3>
+                  
+                 <!-- <h3>$49</h3> -->
+                 <button class="join-button"><span>Join Now</span></button>
+                 <!-- <a href="#" class="card__button">Join Now</a> -->
+              </div>
+           </article>
+
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img src="./images/upcoming-img.jpg" alt="image" class="card__img">
+                 
+              </div>
+
+              <div class="card__data">
+                <!-- <img src="./images/stars.svg" alt=""> -->
+                <h4 class="card_name1">With Kavita</h4>
+                 <h3 class="card__name">Kids Yoga Classes</h3>
+     
+                 <!-- <h3>$49</h3> -->
+                 <button class="join-button"><span>Join Now</span></button>
+              </div>
+           </article>
+
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img src="./images/upcoming-img.jpg" alt="image" class="card__img">
+                
+              </div>
+
+              <div class="card__data">
+                <!-- <img src="./images/stars.svg" alt=""> -->
+                 <h4 class="card_name1">With Kavita</h4>
+                 <h3 class="card__name">Kids Yoga Classes</h3>
+     
+                 <!-- <h3>$49</h3> -->
+                 <button class="join-button"><span>Join Now</span></button>
+              </div>
+           </article>
+
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img src="./images/upcoming-img.jpg" alt="image" class="card__img">
+                
+              </div>
+
+              <div class="card__data">
+                <!-- <img src="./images/stars.svg" alt=""> -->
+                 <h4 class="card_name1">With Kavita</h4>
+                 <h3 class="card__name">Kids Yoga Classes</h3>
+
+                 <!-- <h3>$49</h3> -->
+                 <button class="join-button"><span>Join Now</span></button>
+              </div>
+           </article>
+
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img src="./images/upcoming-img.jpg" alt="image" class="card__img">
+                
+              </div>
+
+              <div class="card__data">
+                <!-- <img src="./images/stars.svg" alt=""> -->
+                 <h4 class="card_name1">With Kavita</h4>
+                 <h3 class="card__name">Kids Yoga Classes</h3>
+
+                 <!-- <h3>$49</h3> -->
+                 <button class="join-button"><span>Join Now</span></button>
+              </div>
+           </article>
+        </div>
+     </div>
+     <!-- Pagination -->
+     <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- Upcomimg Classes End-->
+
+
+
+<!-- Foundation Section Starts-->
+<div class="foundation">
+  <div class="fon-1">
+    <img src="./images/Ellipse 38.png" class="abt-imag">
+   </div>
+   <div class="fon-2">
+    <span>About Us</span>
+     <h1>Foundation</h1>
+     <p>At shivayog – yoga with Kavita Tripathi, we offer a wide range of online yoga
+       sessions tailored to meet the unique needs and goals of individuals of all ages and body types. Our experienced instructors provide personalized guidancebased on specific ailments such as getting relief from PCoS, PCoD, thyroid & hormonal problems, joint pain, BP, diabetes, difficulty in conceiving, mental stress, anxiety, depression, etc. as well as fitness objectives such as weight loss, waist loss, inch loss, fat loss, etc., ensuring each practice is safe,
+       effective, and enjoyable. 
+       <br><br>
+       </p>
+       <div class="but">
+        <a href="./pages/aboutUs/about.html" class="hero-btn">Learn More</a> 
+       </div>
+       
+   </div>
+</div>
+<!-- Foundation Section Ends-->
+
+
+<!-- Services Section Starts-->
+
+<div class="services">
+
+
+    <div class="member-img">
+      <span>Services</span>
+      <h1>Memberships</h1>
+      <img src="./images/member-img (1).jpg" class="memberships">
+      
+
+     <div class="month-card">
+
+      <div class="card">
+
+          <img src="./images/icon6.png">
+   
+         
+        <div class="bottom-text">
+          <div class="head-rating">
+            <h4>1-Month</h4>
+             <span>Immerse yourself in a 
+              month of wellness. For a 
+              healthier, happier you.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+
+          <img src="./images/icon6.png">
+   
+         
+        <div class="bottom-text">
+          <div class="head-rating">
+            <h4>3-Months</h4>
+            <span>Immerse yourself in a 
+              month of wellness. For a 
+              healthier, happier you.
+              
+              </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+
+          <img src="./images/icon6.png">
+   
+         
+        <div class="bottom-text">
+          <div class="head-rating">
+            <h4>6-Months</h4>
+            <span>Immerse yourself in a 
+              month of wellness. For a 
+              healthier, happier you.
+              
+              </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+
+          <img src="./images/icon6.png">
+   
+         
+        <div class="bottom-text">
+          <div class="head-rating">
+            <h4>12-Months</h4>
+            <span>Immerse yourself in a 
+              month of wellness. For a 
+              healthier, happier you.
+              
+              </span>
+          </div>
+        </div>
+      </div>
+
+     </div>
+    </div>
+</div>
+
+<!-- Services Section Ends-->
+
+
+
+
+
+<!--Teachers Section Starts-->
+
+
+
+<section class="container">
+ 
+  <div class="card__container swiper">
+    <div class="teacher-text">
+      <h1>Our Instructors</h1>
+      <p>A Meditative means of discovering dysfunctional perception and cognition, 
+        as well as overcoming it to release suffering, find inner peace and salvation.</p>
+        <div class="slide-buttons">
+ 
+          <div class="swiper-button-next">
+            <i class="ri-arrow-right-s-line"></i>
+         </div>
+         
+         <div class="swiper-button-prev">
+            <i class="ri-arrow-left-s-line"></i>
+         </div>
+
+        </div>
+    </div>
+     <div class="card__content">
+        <div class="swiper-wrapper">
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                 <img src="./images/teacher3.png" alt="image" class="card__img">
+                
+              </div>
+
+              <div class="card__data1">
+                <img src="./images/stars.svg" alt="">
+                 <h3 class="card__name2">Kavita Tripathi</h3>
+                 <h4 class="card_name1">With Kavita</h4>
+                 
+
+              </div>
+           </article>
+
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img src="./images/teacher3.png" alt="image" class="card__img">
+                 
+              </div>
+
+              <div class="card__data1">
+                <img src="./images/stars.svg" alt="">
+                 <h3 class="card__name2">Kavita Tripathi</h3>
+                 <h4 class="card_name1">With Kavita</h4>
+                 
+
+              </div>
+           </article>
+
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img src="./images/teacher3.png" alt="image" class="card__img">
+                
+              </div>
+
+              <div class="card__data1">
+                <img src="./images/stars.svg" alt="">
+                 <h3 class="card__name2">Kavita Tripathi</h3>
+                 <h4 class="card_name1">With Kavita</h4>
+                 
+
+              </div>
+           </article>
+
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img src="./images/teacher3.png" alt="image" class="card__img">
+                
+              </div>
+
+              <div class="card__data1">
+                <img src="./images/stars.svg" alt="">
+                 <h3 class="card__name2">Kids Yoga Classes</h3>
+                 <h4 class="card_name1">With Kavita</h4>
+
+                 
+              </div>
+           </article>
+
+           <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img src="./images/teacher3.png" alt="image" class="card__img">
+                
+              </div>
+
+              <div class="card__data1">
+                <img src="./images/stars.svg" alt="">
+                 <h3 class="card__name2">Kids Yoga Classes</h3>
+                 <h4 class="card_name1">With Kavita</h4>
+
+         
+              </div>
+           </article>
+        </div>
+     </div>
+
+
+     <!-- Pagination -->
+     <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- Teachers Section Ends-->
+
+
+
+
+	<!-- Benefits Section Starts -->
+<div class="benefits">
+  <p>Our Awesome Benefits</p>
+  <h1>What We Offer To You</h1>
+
+  <div class="ben-container">
+    <div class="boxy">
+      <img src="./images/icon7.png">
+      <h4>Flexible Time</h4>
+      <span>The Point Of Using Lorem Ipsum </span>
+    </div>
+    <div class="boxy"><img src="./images/icon7.png">
+      <h4>Flexible Time</h4>
+      <span>The Point Of Using Lorem Ipsum </span></div>
+    <div class="boxy"><img src="./images/icon7.png">
+      <h4>Flexible Time</h4>
+      <span>The Point Of Using Lorem Ipsum </span></div>
+    <div class="boxy"><img src="./images/icon7.png">
+      <h4>Flexible Time</h4>
+      <span>The Point Of Using Lorem Ipsum </span></div>
+    <div class="boxy"><img src="./images/icon7.png">
+      <h4>Flexible Time</h4>
+      <span>The Point Of Using Lorem Ipsum </span></div>
+    <div class="boxy"><img src="./images/icon7.png">
+      <h4>Flexible Time</h4>
+      <span>The Point Of Using Lorem Ipsum </span></div>
+  </div>
+
+</div>
+	<!-- Benefits Section Ends -->
+
+
+
+ <!-- Customer Reviews Starts -->
+<div class="customer-container">
+
+  <section class="container">
+    <div class="card__container swiper">
+      <div class="teacher-text">
+        <span>Testimonials</span>
+        <h1>What Are Our Customers Say</h1>
+      </div>
+       <div class="card__content">
+          <div class="swiper-wrapper">
+             <article class="card__article swiper-slide">
+                <div class="card__data2">
+                   <p>“ It is a long established fact that a reader will be tracked distracted by the readable content of a page is when looking at its layout. </p>
+                   <div class="cust-bottom">
+                   <div class="cust-img">
+                      <img src="./images/avatar-1.png">
+                   </div>
+                   <div class="cust-name">
+                     <img src="./images/stars.svg" alt="">
+                     <h4>James Williams</h4>
+                     <span>Pune</span>
+                   </div>
+
+                   </div>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__data2">
+                   <p>“ It is a long established fact that a reader will be tracked distracted by the readable content of a page is when looking at its layout. </p>
+                   <div class="cust-bottom">
+                   <div class="cust-img">
+                      <img src="./images/avatar-1.png">
+                   </div>
+                   <div class="cust-name">
+                     <img src="./images/stars.svg" alt="">
+                     <h4>James Williams</h4>
+                     <span>Pune</span>
+                   </div>
+
+                   </div>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__data2">
+                   <p>“ It is a long established fact that a reader will be tracked distracted by the readable content of a page is when looking at its layout. </p>
+                   <div class="cust-bottom">
+                   <div class="cust-img">
+                      <img src="./images/avatar-1.png">
+                   </div>
+                   <div class="cust-name">
+                     <img src="./images/stars.svg" alt="">
+                     <h4>James Williams</h4>
+                     <span>Pune</span>
+                   </div>
+
+                   </div>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__data2">
+                   <p>“ It is a long established fact that a reader will be tracked distracted by the readable content of a page is when looking at its layout. </p>
+                   <div class="cust-bottom">
+                   <div class="cust-img">
+                      <img src="./images/avatar-1.png">
+                   </div>
+                   <div class="cust-name">
+                     <img src="./images/stars.svg" alt="">
+                     <h4>James Williams</h4>
+                     <span>Pune</span>
+                   </div>
+
+                   </div>
+                </div>
+             </article>
+
+             <article class="card__article swiper-slide">
+                <div class="card__data2">
+                   <p>“ It is a long established fact that a reader will be tracked distracted by the readable content of a page is when looking at its layout. </p>
+                   <div class="cust-bottom">
+                   <div class="cust-img">
+                      <img src="./images/avatar-1.png">
+                   </div>
+                   <div class="cust-name">
+                     <img src="./images/stars.svg" alt="">
+                     <h4>James Williams</h4>
+                     <span>Pune</span>
+                   </div>
+
+                   </div>
+                </div>
+             </article>
+          </div>
+       </div>
+
+       <!-- Navigation buttons -->
+       <div class="swiper-button-next">
+          <i class="ri-arrow-right-s-line"></i>
+       </div>
+       
+       <div class="swiper-button-prev">
+          <i class="ri-arrow-left-s-line"></i>
+       </div>
+
+       <!-- Pagination -->
+       <div class="swiper-pagination"></div>
+    </div>
+ </section>
+
+
+</div>
+
+ <!-- Customer Reviews Ends-->
+
+
+
+
+  <!-- Blog Section Starts -->
+  
+  <div class="blog-container">
+
+
+   <div class="blog1">
+    <a href="https://www.health.harvard.edu/staying-healthy/yoga-benefits-beyond-the-mat"> 
+     <div class="blog-item">
+      <div class="blog-img">
+        <img src="./images/yogaMat.jpg" alt="">
+      </div>
+      <div class="blog-text">
+        <span>11TH AUGUST 2021 BY-PETER ANDERSON</span>
+        <h4>Yoga Benefits Beyond Mats</h4>
+        <p>Yoga, an ancient practice and meditation, has become increasingly popular 
+          in today's busy society. For many people, yoga provides a retreat from their chaotic and busy lives...</p>
+      </div>
+     </div>
+    </a>
+ 
+      <a href="https://www.arhantayoga.org/blog/what-is-hatha-yoga-philosophy-and-practice/">
+     <div class="blog-item">
+      <div class="blog-img">
+        <img src="./images/HathaYoga1.jpg" alt="">
+      </div>
+      <div class="blog-text">
+        <span>11TH AUGUST 2021 BY-PETER ANDERSON</span>
+        <h4>Yoga Benefits Beyond Mats</h4>
+        <p>Yoga, an ancient practice and meditation, has become increasingly popular 
+          in today's busy society. For many people, yoga provides a retreat from their chaotic and busy lives...</p>
+      </div>
+     </div>
+    </a>
+    
+     <a href="https://www.everydayhealth.com/fitness-pictures/10-surprising-health-perks-of-yoga.aspx">
+     <div class="blog-item">
+      <div class="blog-img">
+        <img src="./images/9benefits.jpg" alt="">
+      </div>
+      <div class="blog-text">
+        <span>11TH AUGUST 2021 BY-PETER ANDERSON</span>
+        <h4>Yoga Benefits Beyond Mats</h4>
+        <p>Yoga, an ancient practice and meditation, has become increasingly popular 
+          in today's busy society. For many people, yoga provides a retreat from their chaotic and busy lives...</p>
+      </div>
+     </div>
+    </a>
+
+
+   </div>
+
+  </div>
+  <!-- <div class='blog'>
+      
+    <div class="blogHeadline text-center">Latest Blogs And News</div>
+
+    <div class="blogsection">
+
+
+        <div class="blog1">
+        <a href="https://www.health.harvard.edu/staying-healthy/yoga-benefits-beyond-the-mat" target="_blank" rel="noopener noreferrer">
+        <div class="blogimg">
+            <img src ="./images/yogaMat.jpg" alt ="" height= '300px'  width= '405px'/>  </div>
+            <div class="blogtext">
+        <div class="blogtext1">Yoga Benefits beyond the mat</div>
+        <div class="blogtext2">Yoga, an ancient practice and meditation, has become increasingly popular in today's busy society. For many people, yoga provides a retreat from their chaotic and busy lives...</div>
+        
+        <div class="blogown">
+            <div class="blogimgown">
+                <img src ="./images/blogimgown.svg" alt ="" />
+            </div>
+           <div class="blogownnameanddate">
+            <div class="blogname">Harvard Health </div>
+            <div class="blogdate">Nov 10 , 2023</div>
+            
+           </div>
+        </div>
+        </div>
+        </a>
+        </div>
+
+
+
+
+        <div class="blog1">
+        <a href="https://www.arhantayoga.org/blog/what-is-hatha-yoga-philosophy-and-practice/" target="_blank" rel="noopener noreferrer">
+        <div class="blogimg">
+            <img src ="./images/HathaYoga1.jpg" alt ="" />  </div>
+            <div class="blogtext">
+        <div class="blogtext1">Hatha Yoga And Its Benefits</div>
+        <div class="blogtext2">Hatha in Sanskrit literally means ‘stubborn’. So Hatha Yoga practice means the stubborn practice of yoga, without the interference of the five senses and the mind...</div>
+        
+        <div class="blogown">
+            <div class="blogimgown">
+                <img src ="./images/blogimgown.svg" alt ="" />
+            </div>
+           <div class="blogownnameanddate">
+            <div class="blogname">Ram Jain</div>
+            <div class="blogdate">Oct 5 , 2023</div>
+            
+           </div>
+        </div>
+        </div>
+        </a>
+        </div>
+
+
+
+        <div class="blog1">
+        <a href="https://www.everydayhealth.com/fitness-pictures/10-surprising-health-perks-of-yoga.aspx" target="_blank" rel="noopener noreferrer">
+        <div class="blogimg">
+            <img src ="./images/9benefits.jpg" alt ="" />  </div>
+            <div class="blogtext">
+        <div class="blogtext1">9 Ways Practicing Yoga Benefits Your Health and Well-Being</div>
+        <div class="blogtext2">For thousands of years, yogis have been touting yoga’s mental and physical powers. Luckily, you don’t have to be an expert to reap the benefits — adding just a few yoga poses...</div>
+        
+        <div class="blogown">
+            <div class="blogimgown">
+                <img src ="./images/blogimgown.svg" alt ="" />
+            </div>
+           <div class="blogownnameanddate">
+            <div class="blogname">Wyatt Myers</div>
+            <div class="blogdate">Dec 18 , 2023</div>
+            
+           </div>
+        </div>
+        </div>
+        </a>
+        </div>
+
+
+        </div> 
+
+
+</div> -->
+ <!-- Blog Section Ends -->
+
+
+
+<footer-component></footer-component>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!--=============== SWIPER JS ===============-->
+<script src="./js/swiper-bundle.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="./js/main.js"></script>
+  
+
+  <script>
+  var menuList = document.getElementById("menuList");
+  menuList.style.maxHeight = "0px";
+
+  function toggleMenu(){
+    if(menuList.style.maxHeight == "0px")
+    {
+      menuList.style.maxHeight = "220px";
+    }else {
+      menuList.style.maxHeight = "0px";
+    }
+  }
+  </script>
+
+</body>
+</html>

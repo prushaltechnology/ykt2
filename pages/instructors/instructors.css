@@ -1,0 +1,416 @@
+body{
+    background-color:#B5E0B215;
+    background-image: url("../../images/web1-back.png");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans", sans-serif;  
+}
+
+
+.container{
+    width: 100%;
+    min-height: 80vh;
+    background-color: #A4B7A3;
+    background-image: url("../../images/banner-back.png");
+ background-repeat: no-repeat;
+ background-position-x: center;
+ background-position-y: center;
+    /* background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative; */
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+   }
+   
+   
+   .navbar{
+       width: 100%;
+       display: flex;
+       align-items: center;
+   }
+   
+   .logo{
+       width: 100px;
+       cursor: pointer;
+       margin: 10px 0;
+   }
+   
+   .menu-icon{
+       width: 25px;
+       cursor: pointer;
+       display: none;
+   }
+   
+   
+   nav{
+    flex: 1;
+    text-align: right;
+   }
+   
+   nav ul li{
+       list-style: none;
+       display: inline-block;
+       margin-right: 30px;
+   }
+   
+   nav ul li a{
+       text-decoration: none;
+       font-weight: bold;
+       color: white;
+   }
+   
+   
+   nav ul li::after{
+       content: '';
+       width: 0%;
+       height: 2px;
+       background: #1E3D3C;
+       display: block;
+       margin: auto;
+       transition: 0.5s;
+   }
+   
+   nav ul li:hover::after{
+       width: 100%;
+   }
+   
+   
+   .main-text{
+       width: 90%;
+       color: #000000;
+       position: absolute;
+       top: 40%;
+       left: 50%;
+       transform: translate( -50%, -50%);
+       text-align: center; 
+   }
+   
+   .main-text h1 {
+       font-size: 62px;
+       padding-bottom: 0.5em;
+   }
+   
+   .main-text p{
+       margin: 10px 0;
+       font-size: 14px;
+       color: #000000;
+   }
+   
+   .hero-btn{
+       display: inline-block;
+       text-decoration: none;
+       color: #fff;
+       border: 1px solid #ffffff;
+       padding: 12px 34px;
+       font-size: 13px;
+       background: transparent;
+       position: relative;
+       cursor: pointer;
+   }
+   
+   .hero-btn:hover{
+       border: 1px solid #D8AE9D;
+       background: #D8AE9D;
+       transition: 2s;
+   }
+
+
+
+
+   @media only screen and (max-width:768px) {
+    nav ul{
+        width: 100%;
+        background: linear-gradient(#A4B7A3, #1E3D3C);
+        position: absolute;
+        top: 80px;
+        right: 0;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        overflow: hidden; 
+        transition: 1s;  
+    }
+}
+
+
+
+
+
+
+.instructors{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10em;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+
+.instruct-col1{
+  flex-basis: 40%;
+  position: relative;
+}
+
+.instruct-col2{
+    flex-basis: 60%;
+    padding-left: 4em;
+    position: relative;
+}
+
+.founder-pic{
+    width: 475px;
+    height: 442px;
+}
+
+
+.teams{
+    padding-top: 10em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.teacher-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
+    padding-top: 5em;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 5em; */
+}
+
+
+
+
+.teacher-container a{
+    text-decoration: none;
+    color: black;
+}
+
+.teacher{
+    text-align: center;
+    flex-basis: 31%;
+}
+
+.teacher hr{
+    height: 1px;
+    width: 20%;
+}
+
+.teacher-image{
+  padding-left:2em;
+  padding-right: 2em;;
+}
+
+.teacher-image:hover{
+    transition: opacity 0.4s ease-in-out;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.8s;
+    transform: translateY(-10px);
+  }
+
+
+.expertise{
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 6em;
+    padding-left: 4em;
+    padding-right: 4em;
+    margin-bottom: 5em;
+}
+
+.exp-row{
+    display: flex;
+    align-items: center;
+}
+
+.exp-col1{
+    flex-basis: 60%;
+    padding-right: 3em;
+}
+
+.exp-col2{
+    display: flex;
+}
+
+
+.exp-col2 ul{
+  padding-right: 3em;
+}
+@media only screen and (min-width:1065px){
+    .teacher-image{
+        width: 235px;
+    }
+    .founder-pic{
+        width: 475px;
+        height: 442px;
+    }
+    
+}
+
+
+@media((min-width:916px) and (max-width:1064px)){
+    .teacher-image{
+        width: 220px;
+    }
+    .founder-pic{
+        width: 475px;
+        height: 442px;
+    }
+    
+}
+
+@media((min-width:854px) and (max-width:916px)){
+    .teacher-image{
+        width: 195px;
+    }
+    .founder-pic{
+        width: 475px;
+        height: 442px;
+    }
+    
+}
+
+@media((min-width:768px) and (max-width:855px)){
+    .teacher-image{
+        width: 170px;
+    }
+    .founder-pic{
+        width: 375px;
+        height: 342px;
+    }
+}
+
+
+@media (450px <= width <= 768px){
+    .teacher-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 1em;
+        padding-top: 5em;
+      
+    }
+    .teacher-image{
+        width: 135px;
+    }
+
+    .instructors{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10em;
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+    .instruct-col2{
+        padding-top: 3em;
+    }
+    .founder-pic{
+        width: 332px;
+        height: 300px;
+    }
+    .exp-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .exp-col2 {
+        padding-top: 2em;
+    }
+    
+}
+
+
+
+@media (360px <= width <= 450px){
+    .founder-pic{
+        width: 232px;
+        height: 200px;
+    }
+
+    .instructors {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .instruct-col2 {
+        padding-left: 0;
+    }
+
+    .teacher-image {
+        width: 256px;
+    }
+
+    .teacher-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 1em;
+        padding-top: 5em;
+      
+    }
+    .exp-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .exp-col2 {
+        padding-top: 2em;
+    }
+}
+
+
+
+
+@media only screen and (min-width:1000px){
+   
+.instructors{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10em;
+    padding-left: 8em;
+    padding-right: 8em;
+}
+
+.teams{
+    padding-top: 10em;
+    padding-left: 8em;
+    padding-right: 8em;
+}
+
+
+.expertise{
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 6em;
+    padding-left: 8em;
+    padding-right: 8em;
+    
+}
+
+
+}
